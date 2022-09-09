@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Bookmark landing page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+</head>
+
+<body>
+  <header class="lg:block hidden">
+    <div class="flex lg:mt-10 mt-12 lg:mx-32 mx-12 justify-between lg:py-3 items-center lg:mb-20">
+      <div>
+        <img src="./images/logo-bookmark.svg" alt="">
+      </div>
+
+      <ul class=" flex items-baseline gap-7 text-xs uppercase col-darkblue font-bold tracking-widest">
+        <li class="cursor-pointer">Features</li>
+        <li class="cursor-pointer">Pricing</li>
+        <li class="cursor-pointer">Contact</li>
+        <button
+          class="login-btn bg-rose cursor-pointer text-white py-3 uppercase px-7 text-xs font-bold tracking-widest rounded">Login</button>
+      </ul>
+    </div>
+  </header>
+
+  <header class="lg:hidden">
+    <div class="flex lg:mt-10 lg:mx-32 justify-between lg:py-3 items-center lg:mb-20">
+      <div class="logo lg:mx-32 ml-12 lg:mt-10 mt-12 mb-20">
+        <img src="./images/logo-bookmark.svg" alt="">
+      </div>
+
+      <div class="flex">
+        <div id="headerDropdown" class="lg:mx-32 mr-12 lg:mt-10 mt-12 mb-20">
+          <img src="./images/icon-hamburger.svg" alt="">
+        </div>
+
+        <div class="header-dropdown-content fixed top-0 right-0 h-screen lg:w-1/4 lg:mt-16 text-sm font-medium">
+          <div class="flex justify-between">
+            <div class="lg:block flex mb-12">
+              <img src="./images/logo-bookmark navbar.svg" alt="">
+            </div>
+
+            <div id="closeNavBar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15">
+                <path fill="#FFF" fill-rule="evenodd"
+                  d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z" />
+              </svg>
+            </div>
+          </div>
+
+          <div>
+            <ul id="list" class="flex lg:flex-row gap-7 text-xs uppercase text-white font-bold tracking-widest">
+              <li
+                class="cursor-pointer border-b border-solid border-white pt-8 border-t pb-8 border-solid border-white mb-8">
+                Features</li>
+              <li class="cursor-pointer border-b border-solid border-white mb-8 pb-8">Pricing</li>
+              <li class="cursor-pointer border-b border-solid border-white mb-8 pb-8">Contact</li>
+              <button id="login-btn"
+                class="login-btn cursor-pointer text-white py-3 uppercase px-7 text-xs font-bold tracking-widest rounded">Login</button>
+            </ul>
+          </div>
+
+          <div class="lg:mr-32 flex gap-10 items-center lg:mt-0 mt-60 item-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path fill="#FFF" fill-rule="evenodd"
+                d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
+              <path fill="#FFF" fill-rule="evenodd"
+                d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="flex lg:flex-row flex-col-reverse lg:w-full">
+    <div class="lg:w-1/2 lg:ml-32 ml-12 lg:mr-0 mr-12 lg:mt-12">
+      <h1 class="font-bold lg:mt-0 mt-14 lg:text-5xl text-3xl lg:w-3/4 mb-8 col-darkblue">A Simple Bookmark Manager</h1>
+      <p class="lg:text-lg text-sm font-semibold lg:text-left text-center lg:w-4/5 mb-8 about"> A clean and simple
+        interface to organize
+        your favourite websites. Open a new
+        browser tab and see your sites load instantly. Try it for free.</p>
+      <div class="lg:gap-6 gap-5 web-btn">
+        <button type="submit"
+          class="bg-lightblue cursor-pointer text-white py-3 lg:px-7 px-2 text-sm font-bold rounded chrome-btn">Get it
+          on
+          Chrome</button>
+        <button type="submit"
+          class="col-darkblue bg-skyblue cursor-pointer py-3 lg:px-7 px-2 text-sm font-bold rounded firefox-btn">Get it
+          on
+          Firefox</button>
+      </div>
+    </div>
+
+    <div class="lg:w-1/2">
+      <div class="tab-img">
+        <img src="./images/illustration-hero.svg" alt="">
+      </div>
+      <div>
+        <div class="cover-bg bg-lightblue rounded-l-full lg:h-80 h-40 lg:-mt-64 -mt-40 lg:ml-48 ml-24">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="text-center mt-20 font-bold lg:text-3xl text-2xl col-darkblue lg:mx-0 mx-12">Features</h3>
+    <p class="text-center lg:w-2/5 w-3/4 lg:mx-auto mx-12 mt-6 mb-12 lg:text-lg text-sm font-medium about">Our aim is to
+      make it quick and easy for
+      you to access your
+      favourite websites.
+      Your bookmarks sync between your devices so you can access them on the go.</p>
+  </div>
+
+  <div
+    class="flex lg:flex-row flex-col text-center lg:border-black lg:border-b lg:border-solid mx-auto lg:w-1/2 w-9/12">
+
+    <div id="openTab" class="tab lg:border-0 border-t border-solid border-black">
+      <p class="lg:pb-6 py-5 text-xl col">Simple Bookmarking</p>
+      <div class="justify-cover">
+        <div class="underline1 h-1 rule"></div>
+      </div>
+      <div class="underrule"></div>
+    </div>
+
+    <div id="openTab2" class="tab lg:border-0 border-t border-solid border-black">
+      <p class="lg:pb-6 py-5 text-xl col">Speedy Searching</p>
+      <div class="justify-cover">
+        <div class="underline2 h-1 rule"></div>
+      </div>
+      <div class="underrule"></div>
+    </div>
+
+    <div id="openTab3" class="tab lg:border-0 border-t border-solid border-black border-b border-solid border-black">
+      <p class="lg:pb-6 py-5 text-xl col">Easy Sharing</p>
+      <div class="justify-cover">
+        <div class="underline3 h-1 rule"></div>
+      </div>
+      <div class="underrule"></div>
+    </div>
+  </div>
+
+  <div class="flex lg:flex-row flex-col lg:w-full" id="tab1">
+    <div class="lg:w-1/2 mt-20">
+      <div class="tab1-img lg:ml-32">
+        <img src="./images/illustration-features-tab-1.svg" alt="">
+      </div>
+      <div>
+        <div class="cover-bg bgtab-lightblue rounded-r-full lg:h-80 h-40 lg:-mt-64 -mt-32">
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:w-1/2">
+      <div class="mx-auto lg:ml-24 ml-12 lg:mr-0 mr-12 lg:text-left text-center">
+        <h3 class="mt-20 font-bold lg:text-3xl text-2xl col-darkblue mb-6">Bookmark in one click</h3>
+        <p class="lg:w-9/12 mb-6 about lg:text-lg text-sm font-medium lg:mx-0">Organize your bookmarks however you
+          like. Our simple
+          drag-and-drop interface
+          gives you complete control over how you manage your favourite sites.</p>
+        <div class="lg:flex hidden">
+          <button type="submit" class="bg-lightblue cursor-pointer text-white py-3 px-7 rounded ">More Info</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex lg:flex-row flex-col lg:w-full hidden" id="tab2">
+    <div class="lg:w-1/2 mt-20">
+      <div class="tab1-img lg:ml-32">
+        <img src="./images/illustration-features-tab-2.svg" alt="">
+      </div>
+      <div>
+        <div class="cover-bg bgtab-lightblue rounded-r-full lg:h-80 h-40 lg:-mt-64 -mt-32">
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:w-1/2">
+      <div class="mx-auto lg:ml-24 ml-12 lg:mr-0 mr-12 lg:text-left text-center">
+        <h3 class="mt-20 font-bold lg:text-3xl text-2xl col-darkblue mb-6">Intelligent search</h3>
+        <p class="lg:w-9/12 mb-6 about lg:text-lg text-sm font-medium lg:mx-0">Our powerful search feature will help
+          you find saved sites in
+          no time at all.
+          No need to trawl through all of your bookmarks.</p>
+        <div class="lg:flex hidden">
+          <button type="submit" class="bg-lightblue cursor-pointer text-white py-3 px-7 rounded ">More Info</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex lg:flex-row flex-col lg:w-full hidden" id="tab3">
+    <div class="lg:w-1/2 mt-20">
+      <div class="tab1-img lg:ml-32">
+        <img src="./images/illustration-features-tab-3.svg" alt="">
+      </div>
+      <div>
+        <div class="cover-bg bgtab-lightblue rounded-r-full lg:h-80 h-40 lg:-mt-64 -mt-32">
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:w-1/2">
+      <div class="mx-auto lg:ml-24 ml-12 lg:mr-0 mr-12 lg:text-left text-center">
+        <h3 class="mt-20 font-bold lg:text-3xl text-2xl col-darkblue mb-6">Share your bookmarks</h3>
+        <p class="lg:w-9/12 mb-6 about lg:text-lg text-sm font-medium lg:mx-0">Easily share your bookmarks and
+          collections with others.
+          Create a shareable
+          link that you can send at the click of a button.</p>
+        <div class="lg:flex hidden">
+          <button type="submit" class="bg-lightblue cursor-pointer text-white py-3 px-7 rounded ">More Info</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lg:mx-0 mx-12 text-center">
+    <h3 class="mt-20 font-bold lg:text-3xl text-2xl col-darkblue mb-6">Download the extension</h3>
+    <p class="lg:w-2/5 mb-6 about lg:text-lg text-sm font-medium lg:mx-auto">We’ve got more browsers in the pipeline.
+      Please do let us know if
+      you’ve
+      got a favourite you’d like us to prioritize.</p>
+  </div>
+
+  <div class="flex lg:flex-row flex-col lg:gap-10 gap-5 lg:mx-0 mx-12 justify-center lg:mt-20 mt-0 lg:mb-32 mb-0">
+    <div class="card lg:mt-0 mt-4">
+      <div class="flex justify-center">
+        <img src="./images/logo-chrome.svg" alt="">
+      </div>
+      <h4 class="font-bold text-xl col-darkblue text-center pt-8 pb-2">Add to Chrome</h4>
+      <p class="text-center mb-6 about lg:text-lg text-sm font-medium">Minimum version 62</p>
+      <div class="pb-6">
+        <img src="./images/bg-dots.svg" alt="">
+      </div>
+      <div class="flex items-center justify-center">
+        <button type="submit"
+          class="chrome-btn text-center bg-lightblue text-white py-3 px-7 rounded text-sm font-medium">Add & Install
+          Extension</button>
+      </div>
+    </div>
+
+    <div class="card lg:mt-8 mt-4">
+      <div class="flex justify-center">
+        <img src="./images/logo-firefox.svg" alt="">
+      </div>
+      <h4 class="font-bold text-xl col-darkblue text-center pt-8 pb-2">Add to Firefox</h4>
+      <p class="text-center mb-6 about lg:text-lg text-sm font-medium">Minimum version 55</p>
+      <div class="pb-6">
+        <img src="./images/bg-dots.svg" alt="">
+      </div>
+      <div class="flex items-center justify-center">
+        <button type="submit"
+          class="chrome-btn text-center bg-lightblue text-white py-3 px-7 rounded text-sm font-medium">Add & Install
+          Extension</button>
+      </div>
+    </div>
+
+    <div class="card lg:mt-16 mt-4">
+      <div class="flex justify-center">
+        <img src="./images/logo-opera.svg" alt="">
+      </div>
+      <h4 class="font-bold text-xl col-darkblue text-center pt-8 pb-2">Add to Opera</h4>
+      <p class="text-center mb-6 about lg:text-lg text-sm font-medium">Minimum version 46</p>
+      <div class="pb-6">
+        <img src="./images/bg-dots.svg" alt="">
+      </div>
+      <div class="flex justify-center">
+        <button type="submit"
+          class="chrome-btn text-center bg-lightblue text-white py-3 px-7 rounded text-sm font-medium">Add & Install
+          Extension</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="lg:mx-0 mx-12 text-center lg:mb-20">
+    <h3 class="mt-20 font-bold lg:text-3xl text-2xl col-darkblue mb-6">Frequently Asked Questions</h3>
+    <p class="lg:w-2/5 mb-6 about lg:text-lg text-sm font-medium lg:mx-auto">Here are some of our FAQs. If you have
+      any other questions you’d
+      like answered please feel free to email us.</p>
+  </div>
+
+  <div class="lg:mx-0 mx-12">
+    <div class="dropdown justify-center flex">
+      <!-- Question 1 -->
+      <div class="question1 flex border-black lg:border-t border-b border-solid py-4">
+        <span class="text-center font-medium lg:text-lg text-sm col-darkblue">What is Bookmark?</span>
+        <div class="red-arrow">
+          <img src="./images/red-arrow.svg" alt="" class="arrow">
+        </div>
+      </div>
+
+      <div class="dropdown-content lg:w-1/4 mt-16 text-sm font-medium">
+        <!-- Answer 1 -->
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
+          justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+      </div>
+    </div>
+
+    <div class="dropdown justify-center flex">
+      <!-- Question 2 -->
+      <div class="flex question2 border-black border-b border-solid py-4">
+        <span class="span2 text-center font-medium lg:text-lg text-sm col-darkblue">How can I request a new
+          browser?</span>
+        <div class="red-arrow">
+          <img src="./images/red-arrow.svg" alt="" class="arrow">
+        </div>
+      </div>
+
+      <div class="dropdown-content lg:w-1/4 mt-16 about text-sm font-medium">
+        <!-- Answer 2 -->
+        <p>
+          Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+          Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+          ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+          Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+        </p>
+      </div>
+    </div>
+
+    <div class="dropdown justify-center flex">
+      <!-- Question 3 -->
+      <div class="question3 flex border-black border-b border-solid py-4">
+        <span class="span3 text-center font-medium lg:text-lg text-sm col-darkblue">Is there a mobile app?</span>
+        <div class="red-arrow">
+          <img src="./images/red-arrow.svg" alt="" class="arrow">
+        </div>
+      </div>
+
+      <div class="dropdown-content lg:w-1/4 mt-16 about text-sm font-medium">
+        <!-- Answer 3 -->
+        <p>
+          Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
+          urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
+          sollicitudin ex et ultricies bibendum.
+        </p>
+      </div>
+    </div>
+
+    <div class="dropdown justify-center flex">
+      <!-- Question 4 -->
+      <div class="question4 flex border-black border-b border-solid py-4">
+        <span class="span4 text-center font-medium lg:text-lg text-xs col-darkblue ">What about other Chromium
+          browsers?</span>
+        <div class="red-arrow">
+          <img src="./images/red-arrow.svg" alt="" class="arrow">
+        </div>
+      </div>
+
+      <div class="dropdown-content lg:w-1/4 mt-16 about text-sm font-medium">
+        <!-- Answer 4 -->
+        <p>
+          Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
+          vitae neque eget nisl gravida pellentesque non ut velit.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex justify-center mt-10 mb-32">
+    <button type="submit" class="bg-lightblue cursor-pointer text-white py-3 px-7 rounded">More Info</button>
+  </div>
+
+  <div class="bg-lightblue">
+    <div class="lg:mx-0 mx-12 text-center text-white">
+      <p class="footer-info uppercase pt-8">35,000+ already joined</p>
+      <p class="pt-4 font-semibold lg:text-4xl text-xl lg:w-2/6 mx-auto">Stay up-to-date with what we’re doing
+      </p>
+    </div>
+
+    <form class="form" id="form">
+      <div class="flex lg:flex-row flex-col lg:justify-center pt-6 gap-5 pb-20">
+        <div>
+          <div class="flex justify-around item-center lg:mx-0 mx-auto email text-base py-3 lg:mt-0 mt-7 rounded">
+            <input type="email" name="email" placeholder="Enter your email address" class="">
+            <div id="warningImg" class="hidden w-5 h-5 items-center">
+              <img src="./images/icon-error.svg" alt="">
+            </div>
+          </div>
+          <p class="empty-email-message lg:mx-0 mx-12 font-light italic text-sm"></p>
+          <p class="invalid-email-message lg:mx-0 mx-12 font-light italic text-sm"></p>
+        </div>
+        <div class="item-center">
+          <button
+            class="submit-email login-btn bg-rose cursor-pointer text-white py-3 lg:px-7 rounded footer-info">Contact
+            Us</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="bg-darkblue flex lg:flex-row flex-col lg:justify-between lg:items-center py-10">
+    <div class="lg:ml-32 flex lg:flex-row flex-col lg:items-center">
+      <div class="lg:block flex justify-center">
+        <img src="./images/logo-bookmark footer.svg" alt="">
+      </div>
+
+      <ul
+        class="lg:pl-20 lg:pt-0 pt-16 text-white lg:flex-row flex-col flex gap-12 lg:text-sm text-base uppercase tracking-widest cursor-pointer">
+        <li class="item-center">Features</li>
+        <li class="item-center">Pricing</li>
+        <li class="item-center">Contact</li>
+      </ul>
+    </div>
+
+    <div class="lg:mr-32 flex gap-10 items-center lg:mt-0 mt-16 item-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+        <path fill="#FFF" fill-rule="evenodd"
+          d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+      </svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
+        <path fill="#FFF" fill-rule="evenodd"
+          d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z" />
+      </svg>
+    </div>
+  </div>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/Victorycodes">Victory Ejimofor</a>.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
